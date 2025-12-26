@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: notification-service
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/notification_db
+    username: notification_user
+    password: notification_pass
+    pool:
+      initial-size: 10
+      max-size: 20
+      max-idle-time: 30m
+      max-acquire-time: 3s
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification_db
+    username: notification_user
+    password: notification_pass
+
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    enabled: true
+
+  web:
+    resources:
+      add-mappings: false
+
+logging:
+  level:
+    root: INFO
+    com.notification: DEBUG
+    org.springframework: INFO
+    io.r2dbc: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+server:
+  port: 8080
+  shutdown: graceful
+  netty:
+    connection-timeout: 20s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+app:
+  service-a:
+    client-timeout: 20000
+  service-b:
+    notification-batch-size: 10
+    notification-interval-ms: 1000

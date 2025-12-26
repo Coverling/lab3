@@ -1,0 +1,44 @@
+# Maven
+target/
+.classpath
+.project
+.settings
+*.jar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+
+# Docker
+.dockerignore
+
+# Build
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Profiling
+profiling/**/*.jfr
+profiling/**/*.png
+profiling/**/*.html
+profiling/**/*.csv
+!profiling/**/.gitkeep
