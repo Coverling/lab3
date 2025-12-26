@@ -4,29 +4,29 @@
 
 Memory Hot Spots
 
-!(1)[screenshots/1.png]
+![Memory Hot Spots Before Optimization](screenshots/1.png)
 
 CPU Hot Spots
 
-!(2)[screenshots/2.png]
+![CPU Hot Spots Before Optimization](screenshots/2.png)
 
 GC Метрики
 
-!(3)[screenshots/3.png]
+![GC Metrics Before Optimization](screenshots/3.png)
 
 ## 2. Тесты после оптимизации
 
 Memory Hot Spots
 
-!(4)[screenshots/4.png]
+![Memory Hot Spots After Optimization](screenshots/4.png)
 
 CPU Hot Spots
 
-!(5)[screenshots/5.png]
+![CPU Hot Spots After Optimization](screenshots/5.png)
 
 GC Метрики
 
-!(6)[screenshots/6.png]
+![GC Metrics After Optimization](screenshots/6.png)
 
 # Notification Service - Reactive Spring Boot Application
 
